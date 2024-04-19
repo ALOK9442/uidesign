@@ -14,20 +14,22 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   };
 
   return (
-    <div className="flex items-center justify-between ">
+    <div>
+      
+    <div className="flex items-center justify-between space-x-12">
       <button
-        className={`px-4 py-2 rounded ${currentPage === 1 ? 'bg-gray-200 text-gray-700' : 'bg-blue-500 text-white'}`}
+        className={`font-mono px-4 py-2 rounded ${currentPage === 1 ? 'bg-gray-200 text-gray-700' : 'bg-[#f05222] text-white'}`}
         onClick={handlePrevPage}
         disabled={currentPage === 1}
       >
         {'< Prev'}
       </button>
-      <div className="flex space-x-2">
+      <div className="flex space-x-4">
         {Array.from({ length: totalPages }, (_, index) => (
           <button
             key={index}
-            className={`px-4 py-2 rounded ${
-              currentPage === index + 1 ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'
+            className={`px-4 py-2 font-mono rounded ${
+              currentPage === index + 1 ? 'bg-[#f05222] text-white' : 'bg-gray-200 text-gray-700'
             }`}
             onClick={() => onPageChange(index + 1)}
           >
@@ -36,14 +38,15 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         ))}
       </div>
       <button
-        className={`px-4 py-2 rounded ${
-          currentPage === totalPages ? 'bg-gray-200 text-gray-700' : 'bg-blue-500 text-white'
+        className={`font-mono px-4 py-2 rounded ${
+          currentPage === totalPages ? 'bg-gray-200 text-gray-700' : 'bg-[#f05222] text-white'
         }`}
         onClick={handleNextPage}
         disabled={currentPage === totalPages}
       >
         {'Next >'}
       </button>
+    </div>
     </div>
   );
 };
