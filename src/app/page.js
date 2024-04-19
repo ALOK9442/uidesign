@@ -2,11 +2,11 @@
 
 import React from 'react';
 import { useState } from 'react';
-import Pagination from './component/Pagination';
 import { dummyData } from './dummydata/dummydata';
 import FileItem from './component/fileitem';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretUp, faCheck, faCross, faXmarkSquare } from '@fortawesome/free-solid-svg-icons';
+import Pagination from './component/pagination';
 
 const ITEMS_PER_PAGE = 3;
 
