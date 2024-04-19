@@ -16,7 +16,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   return (
     <div>
       
-    <div className="flex items-center justify-between space-x-12">
+    <div className="flex items-center justify-between space-x-2 sm:space-x-12">
       <button
         className={`font-mono px-4 py-2 rounded ${currentPage === 1 ? 'bg-gray-200 text-gray-700' : 'bg-[#f05222] text-white'}`}
         onClick={handlePrevPage}
@@ -38,7 +38,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         ))}
       </div>
       <button
-        className={`font-mono px-4 py-2 rounded ${
+        className={`font-mono px-1 sm:px-4 py-2 rounded ${
           currentPage === totalPages ? 'bg-gray-200 text-gray-700' : 'bg-[#f05222] text-white'
         }`}
         onClick={handleNextPage}

@@ -47,10 +47,10 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <div className='flex justify-around items-center'>
+      <div className='flex justify-around items-center sm:flex-row flex-col'>
         <Pagination
           currentPage={currentPage}
-          totalPages={Math.ceil(dummyData.length / ITEMS_PER_PAGE)}
+          totalPages={Math.ceil(dummyData.length / itemsPerPage)}
           onPageChange={handlePageChange}
         />
         <div className='flex items-center justify-center space-x-2'>
